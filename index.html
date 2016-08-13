@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Andela Clock">
+
+    <meta name="author" content="Jamiu Abdulmujeeb Emjay">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- import material icons -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- refernce materializecss css file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- external css file to overide materializecss and add other cool effects-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src='canteen.min.js'></script>
+    
+    <title>Andela Clock</title>
+  </head>
+
+
+
+
+  <body>
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/andela_wall.jpg" alt="Unsplashed background img 1"></div>
+
+      <div class="container">
+
+        <!-- navigation bar -->
+        <nav>
+          <div class="nav-wrapper blue">
+
+            <a href="#" class="brand-logo left"><em><b>AndeClock</b></em></a>
+
+            <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">Home</a></li>
+              <li><a href="https://github.com/abdulemjay/andela-analogue-clock" target="blank">Repo</a></li>
+              <li><a href="https://github.com/abdulemjay/andela-analogue-clock/archive/master.zip" target="blank">Download</a></li>
+            </ul>
+
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="#">Home</a></li>
+              <li><a href="https://github.com/abdulemjay/andela-analogue-clock" target="blank">Repo</a></li>
+              <li><a href="https://github.com/abdulemjay/andela-analogue-clock/archive/master.zip" target="blank">Download</a></li>
+            </ul>
+
+          </div>
+        </nav>
+
+
+
+        <!-- the main content of the page -->
+        <main>
+          <div class="row">
+
+            <!-- import tick sound to the clock -->
+            <audio id="clockTick" preload="auto">
+              <source src="sound/pop.mp3"/>
+            </audio>
+
+            <br>
+
+            <!-- html5 canvas declaration with reference to clock canvas -->
+            <canvas id="clockCanvas" width="400" height="400" class="col s6 m6 l6">
+              Opps! Sorry, either your browser or browser version doesnt support Canvas, Please switch to a better browser, click <a href="http://www.w3schools.com/html/html5_canvas.asp">HERE</a> for more info on Canvas compatibility
+            </canvas>
+
+            <!-- drop down for the time zone selection -->
+            <div class="white input-field right col s6 m6 l6">
+              <select onchange="initClock()" id="tzSelect">
+                <option value="1" selected>SELECT A TIME-ZONE</option>
+                <option value="12">UTC+12 (New Zealand)</option>
+                <option value="11">UTC+11 (Guinea)</option>
+                <option value="10">UTC+10 (Australia)</option>
+                <option value="9">UTC+9 (India)</option>
+                <option value="8">UTC+8 (China)</option>
+                <option value="7">UTC+7 (Vietnam)</option>
+                <option value="6">UTC+6 (Russia)</option>
+                <option value="5">UTC+5 (Nepal)</option>
+                <option value="4">UTC+4 (Georgia)</option>
+                <option value="3">UTC+3 (NAIROBI)</option>
+                <option value="2">UTC+2 (Congo)</option>
+                <option value="1">UTC+1 (LAGOS)</option>
+                <option value="0">UTC&#177;0 (Gambia)</option>
+                <option value="-1">UTC-1 (Portugal)</option>
+                <option value="-2">UTC-2 (Brazil)</option>
+                <option value="-3">UTC-3 (Chile)</option>
+                <option value="-4">UTC-4 (Netherlands)</option>
+                <option value="-5">UTC-5 (NEW-YORK)</option>
+                <option value="-6">UTC-6 (Sierra)</option>
+                <option value="-7">UTC-7 (Mexico)</option>
+                <option value="-8">UTC-8 (Canada)</option>
+                <option value="-9">UTC-9 (France)</option>
+                <option value="-10">UTC-10 (Hawaii)</option>
+                <option value="-11">UTC-11 (Niue)</option>
+                <option value="-12">UTC-12 (Howland)</option>
+              </select>
+            </div>
+
+          </div>
+        </main>
+
+
+        <!-- foot note -->
+        <footer class="container center" >
+          <div class="footer-copyright blue lighten-3">
+            <span class="black-text">ANDELA LOS Boot-camp 2016 XVI Project<br>
+            Developed by </span><a class="white-text" href="https://github.com/abdulemjay" target="blank">Emjay</a></p>
+          </div>
+        </footer>
+      
+
+
+      </div>
+    </div>
+  </body>
+
+
+ <!--Import jQuery library necessary for materializecss-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Compiled and minified JavaScript for materializecss -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <!-- external script file for clock implementation -->
+  <script src="js/clock.js"></script>
+
+  
+</html>
